@@ -9,6 +9,15 @@ createRoot(document.getElementById("root")).render(
   </StrictMode>
 );
 
+// const div = createRoot.createElement("div", {
+//   name: "main",
+//   id: "test-Id",
+//   className: "test-class",
+//   children: ["helo", "", "react", "", "from", "UA"],
+// });
+
+// console.log(div);
+
 // ===================================================
 //One--example
 // import { createRoot } from "react-dom/client";
