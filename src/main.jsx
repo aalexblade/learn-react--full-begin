@@ -1,5 +1,5 @@
 // import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+// import { createRoot } from "react-dom/client";
 import "./index.css";
 
 // import App from "./App.jsx";
@@ -146,6 +146,25 @@ import "./index.css";
 
 // Declarative
 
-createRoot(document.getElementById("root")).render(
-  <h1 className="header">Hello my first element from React!</h1>
+// createRoot(document.getElementById("root")).render(
+//   <h1 className="header">Hello my first element from React!</h1>
+// );
+
+// ==================================================================
+import { createRoot } from "react-dom/client";
+
+const root = createRoot(document.getElementById("root"));
+
+root.render(
+  <main>
+    <img src="/src/assets/react.svg" width="40" alt="React logo" />
+    <h1>Fun fuct about React</h1>
+    <ul>
+      <li>Was first reales 2013</li>
+      <li>Was originally created by Jordan Walker</li>
+      <li>Was well over 200k stars on GitHub</li>
+      <li>Is maintained by Meta</li>
+      <li>Powers thousands of entrprise appse, incliding mobile apps </li>
+    </ul>
+  </main>
 );
