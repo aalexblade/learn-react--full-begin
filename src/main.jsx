@@ -1,5 +1,6 @@
 // import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+// import { createRoot } from "react-dom/client";
+
 import "./index.css";
 
 // import App from "./App.jsx";
@@ -146,6 +147,27 @@ import "./index.css";
 
 // Declarative
 
-createRoot(document.getElementById("root")).render(
-  <h1 className="header">Hello my first element from React!</h1>
-);
+// createRoot(document.getElementById("root")).render(
+//   <h1 className="header">Hello my first element from React!</h1>
+// );
+
+// ==================================================================
+
+import { createRoot } from "react-dom/client";
+
+const root = createRoot(document.getElementById("root"));
+
+root.render(<MarkupSection />);
+
+function MarkupSection() {
+  return (
+    <section>
+      <h1>I love React</h1>
+      <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+      </ul>
+    </section>
+  );
+}
