@@ -153,21 +153,74 @@ import "./index.css";
 
 // ==================================================================
 
+// COMPONENTS
+
+// import { createRoot } from "react-dom/client";
+
+// const root = createRoot(document.getElementById("root"));
+
+// function Page() {
+//   return (
+//     <div>
+//       <header>
+//         <img src="/src/assets/react.svg" alt="React logo" width="40" />
+//       </header>
+
+//       <main>
+//         <h1>Reasons I'm excited to learn React</h1>
+//         <ol>
+//           <li>one</li>
+//           <li>two</li>
+//           <li>three</li>
+//         </ol>
+//       </main>
+//       <footer>© 2025 Blade development. All rights reserved.</footer>
+//     </div>
+//   );
+// }
+
+// root.render(<Page />);
+// ==================================================================
+
+//  costum FRAGMENT parent/children
+
 import { createRoot } from "react-dom/client";
 
 const root = createRoot(document.getElementById("root"));
 
-root.render(<MarkupSection />);
-
-function MarkupSection() {
+function Page() {
   return (
-    <section>
-      <h1>I love React</h1>
-      <ul>
+    <header>
+      <img src="/src/assets/react.svg" alt="React logo" width="40" />
+    </header>
+  );
+}
+
+function Main() {
+  return (
+    <main>
+      <h1>Reasons I'm excited to learn React</h1>
+      <ol>
         <li>one</li>
         <li>two</li>
         <li>three</li>
-      </ul>
-    </section>
+      </ol>
+    </main>
   );
 }
+
+function Footer() {
+  return (
+    <footer>
+      <small>© 2025 Blade development. All rights reserved.</small>
+    </footer>
+  );
+}
+
+root.render(
+  <>
+    <Page />
+    <Main />
+    <Footer />
+  </>
+);
