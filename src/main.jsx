@@ -182,45 +182,81 @@ import "./index.css";
 // root.render(<Page />);
 // ==================================================================
 
-//  costum FRAGMENT parent/children
+//  costum FRAGMENT and STYLE parent/children
+
+// import { createRoot } from "react-dom/client";
+
+// const root = createRoot(document.getElementById("root"));
+
+// function Header() {
+//   return (
+//     <header className="header">
+
+//       <img
+//         className="nav-logo"
+//         src="/src/assets/react-logo.png"
+//         alt="React logo"
+//       />
+
+//       <nav>
+//         <ul className="nav-list">
+//           <li className="nav-list-item">Pricing</li>
+//           <li className="nav-list-item">About</li>
+//           <li className="nav-list-item">Contact</li>
+//         </ul>
+//       </nav>
+
+//     </header>
+//   );
+// }
+
+// function Main() {
+//   return (
+//     <main>
+//       <h1>Reasons I'm excited to learn React</h1>
+//       <ol>
+//         <li>
+//           React is a popular library, so I will be able to fit in with all the
+//           coolest devs out there! 😎
+//         </li>
+//         <li>
+//           I am more likely to get a job as a front end developer if I know React
+//         </li>
+//       </ol>
+//     </main>
+//   );
+// }
+
+// function Footer() {
+//   return <footer>© 2025 Blade development. All rights reserved.</footer>;
+// }
+
+// root.render(
+//   <>
+//     <Header />
+//     <Main />
+//     <Footer />
+//   </>
+// );
+
+// =========================================================================
+// LESSON 19: Organizing Components
 
 import { createRoot } from "react-dom/client";
+import Header from "./Header";
+import MainPage from "./MainPage";
+import Footer from "./Footer";
 
 const root = createRoot(document.getElementById("root"));
 
 function Page() {
   return (
-    <header>
-      <img src="/src/assets/react.svg" alt="React logo" width="40" />
-    </header>
+    <>
+      <Header />
+      <MainPage />
+      <Footer />
+    </>
   );
 }
 
-function Main() {
-  return (
-    <main>
-      <h1>Reasons I'm excited to learn React</h1>
-      <ol>
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
-      </ol>
-    </main>
-  );
-}
-
-function Footer() {
-  return (
-    <footer>
-      <small>© 2025 Blade development. All rights reserved.</small>
-    </footer>
-  );
-}
-
-root.render(
-  <>
-    <Page />
-    <Main />
-    <Footer />
-  </>
-);
+root.render(<Page />);
