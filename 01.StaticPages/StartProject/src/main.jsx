@@ -243,9 +243,9 @@ import "./index.css";
 // LESSON 19: Organizing Components
 
 import { createRoot } from "react-dom/client";
-import Header from "./Header";
-import MainPage from "./MainPage";
-import Footer from "./Footer";
+import Header from "./components/Header";
+import MainPages from "./components/MainPages";
+import Footer from "./components/Footer";
 
 const root = createRoot(document.getElementById("root"));
 
@@ -253,7 +253,7 @@ function Page() {
   return (
     <>
       <Header />
-      <MainPage />
+      <MainPages />
       <Footer />
     </>
   );
