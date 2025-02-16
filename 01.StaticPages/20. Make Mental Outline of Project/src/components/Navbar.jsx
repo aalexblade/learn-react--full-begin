@@ -1,9 +1,9 @@
 function Navbar() {
   return (
-    <header>
-      <nav>
-        <img src="/src/assets/react.svg" alt="React logo" />
-        <span>ReactFacts</span>
+    <header className="header">
+      <nav className="nav-header">
+        <img src="/src/assets/react.svg" alt="React logo" width="25" />
+        <span className="nav-text">ReactFacts</span>
       </nav>
     </header>
   );
