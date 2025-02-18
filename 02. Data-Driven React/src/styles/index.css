@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f55a5a;
+  color: #fff;
+}
+
+header > img { 
+ width: 24px;
+  margin-right: 7px;
+} 
+
+header > h1{
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+
