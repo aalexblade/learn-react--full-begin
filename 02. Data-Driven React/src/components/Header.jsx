@@ -1,7 +1,7 @@
 function Header() {
   return (
     <header>
-      <img src="../img/Geirangerfjord.png" alt="" />
+      <img src="src/img/globe.png" alt="Globe logo" />
       <h1>my travel jurnal.</h1>
     </header>
   );
