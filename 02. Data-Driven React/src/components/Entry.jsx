@@ -1,6 +1,6 @@
 function Entry() {
   return (
-    <article className="article-view">
+    <article className="article-view container">
       <div className="article-img">
         <img src="src/img/MountFuji.png" alt="Photo Mount Fuji" />
       </div>
@@ -9,7 +9,7 @@ function Entry() {
         <div className="article-wrap">
           <img src="src/img/marker.png" alt="local" />
           <span>JAPAN</span>
-          <a href="">View on Google Maps</a>
+          <a href=" ">View on Google Maps</a>
         </div>
 
         <h2 className="article-title">Mount Fuji</h2>
