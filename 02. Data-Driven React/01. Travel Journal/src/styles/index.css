@@ -64,7 +64,21 @@ header > h1 {
   display: flex;
   align-items: center;
   margin-top: 100px;
+}
 
+.article-img {
+  width: 125px;
+  height: 168px;
+  overflow: hidden;
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-right: 19px;
+}
+
+.article-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .article-wrap-content {
