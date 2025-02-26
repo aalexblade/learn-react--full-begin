@@ -24,11 +24,15 @@ the first letter of each string is capitalized
 const names = ["alice", "bob", "charlie", "danielle"];
 // -->        ["Alice", "Bob", "Charlie", "Danielle"]
 // Your code here
+const nameUppreCases =  names.map((name)=>{
+  return name[0].toUpperCase()+name.slice(1)
+})
 
-const nameUppreCases = names.map((name) => {
-  return name[0].toUpperCase() + name.slice(1);
-});
 console.log(nameUppreCases);
+
+// const nameUppreCases = names.map(
+//   name => name[0].toUpperCase() + name.slice(1)
+// );
 
 // const namesUpperCase = names.map(
 //   (name) => name.charAt(0).toUpperCase() + name.slice(1)
