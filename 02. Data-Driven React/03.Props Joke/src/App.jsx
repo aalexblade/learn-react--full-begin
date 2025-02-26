@@ -2,13 +2,13 @@ import Jouke from "./components/Jouke";
 import jokesData from "./jokesData";
 
 function App() {
-  const jokeElements = jokesData.map((joke) => {
+  const jokeElement = jokesData.map((joke) => {
     const { setup, punchline } = joke;
     return <Jouke setup={setup} punchline={punchline} />;
   });
-  return <main>{jokeElements}</main>;
-}
 
+  return <main>{jokeElement}</main>;
+}
 export default App;
 
 // ===========================================================
