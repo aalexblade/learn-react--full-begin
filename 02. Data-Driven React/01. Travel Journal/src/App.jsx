@@ -3,20 +3,8 @@ import Entry from "./components/Entry";
 import data from "./data";
 
 function App() {
-  const entryElements = data.map((enter) => {
-    const { id, img, title, country, googleMapsLink, dates, text } = enter;
-
-    return (
-      <Entry
-        id={id}
-        img={img}
-        title={title}
-        country={country}
-        googleMapsLink={googleMapsLink}
-        dates={dates}
-        text={text}
-      />
-    );
+  const entryElements = data.map((entry) => {
+    return <Entry key={entry.id} {...entry} />;
   });
 
   return (
