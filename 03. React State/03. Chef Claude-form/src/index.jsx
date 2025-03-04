@@ -1,6 +1,9 @@
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
+import Counter from "./counter";
+import TestState from "./TestState";
+
 function App() {
   function handleClick() {
     console.log("I was clicked!");
@@ -18,6 +21,11 @@ function App() {
         alt="Placeholder image from Picsum"
       />
       <button onClick={handleClick}>Click me</button>
+
+      <footer>
+        <Counter />
+        <TestState/>
+      </footer>
     </main>
   );
 }
