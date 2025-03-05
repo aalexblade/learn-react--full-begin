@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-import Counter from "./counter";
-import TestState from "./TestState";
+import Counter from "./components/Counter";
+import TestState from "./components/TestState";
 
 function App() {
   function handleClick() {
