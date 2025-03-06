@@ -1,15 +1,18 @@
 import React from "react";
 
 function TestState() {
-  const result = React.useState("Yes");
+  let [isImportant, setIsImportant] = React.useState("Yes");
+  function handleClick() {
+    setIsImportant("Definitely");
+  }
 
-  console.log(result);
+  console.log(isImportant);
 
   return (
-    <main>
-      <h2 style={{ color: "white" }}>Is state importan to know?</h2>
-      <button>{result[0]}</button>
-    </main>
+    <>
+      <h1 style={{ color: "white" }}>Is state importan to know?</h1>
+      <button onClick={handleClick}>{isImportant}</button>
+    </>
   );
 }
 
