@@ -3,17 +3,17 @@ import React from "react";
 function Counter() {
   const [count, setCount] = React.useState(0);
 
-  function minus() {
+  function minuse() {
     setCount((prevCount) => prevCount - 1);
   }
 
   function add() {
     setCount((prevCount) => prevCount + 1);
   }
-
+  console.log(count);
   return (
     <>
-      <button onClick={minus} aria-label="Decrease count">
+      <button onClick={minuse} aria-label="Decrease count">
         -
       </button>
       <span>{count}</span>
