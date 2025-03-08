@@ -1,26 +1,47 @@
 import React from "react";
 
 function TogglingState() {
-  const [click, setClick] = React.useState(false);
+  const [isGoingOut, setIsGoingOut] = React.useState(false);
 
-  function hadleToggleClick() {
-    setClick((prevClick) => (prevClick === "yes" ? "no" : "yes"));
-    console.log(click);
+  function Toggle() {
+    setIsGoingOut((prevState) => !prevState);
   }
-
-  //     let click = "true";
-
-  //   function hadleClick() {
-  //     console.log(click ? "false" : "true" );
-  //     console.log(!click? "true" : "false")
-  //   }
 
   return (
     <>
       <h1>Do I file like gouing out tonight?</h1>
-      <button onClick={hadleToggleClick}>{click}</button>
+      <button
+        onClick={Toggle}
+        aria-label={`Current answer is ${
+          isGoingOut ? "Yes" : "No"
+        }. Click to change it.`}
+      >
+        {isGoingOut ? "Yes" : "No"}
+      </button>
     </>
   );
 }
+
+// function TogglingState() {
+//   const [isGoingOut, setIsGoingOut] = React.useState(false);
+
+//   function chancheMing() {
+//     setIsGoingOut((prevStae) => !prevStae);
+//   }
+//   console.log(isGoingOut);
+//   return (
+//     <>
+//       <h1>Do I file like gouing out tonight?</h1>
+//       <button
+//         aria-label={`current answer is ${
+//           isGoingOut ? "yes" : "no"
+//         }. Click to change it.`}
+//         onClick={chancheMing}
+//       >
+//         {isGoingOut ? "yes" : "no"}
+//       </button>
+//     </>
+//   );
+// }
 
 export default TogglingState;

@@ -5,8 +5,8 @@ import Images from "./components/Images";
 import Counter from "./components/Counter";
 import TestState from "./components/TestState";
 import TernaryOperator from "./components/TernaryOperator";
-import TogglingState from "./components/TogglingState"
-
+import TogglingState from "./components/TogglingState";
+import ComplexStateObjects from "./components/ComplexStateObjects";
 
 function App() {
   return (
@@ -15,7 +15,8 @@ function App() {
       {/* <Counter /> */}
       {/* <TestState /> */}
       {/* <TernaryOperator /> */}
-      <TogglingState />
+      {/* <TogglingState /> */}
+      <ComplexStateObjects />
     </main>
   );
 }
