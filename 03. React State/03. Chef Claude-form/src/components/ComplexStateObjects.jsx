@@ -2,7 +2,6 @@ import React from "react";
 
 function ComplexStateObjects() {
   const [myFavoriteThings, setMyFavoriteThings] = React.useState([]);
-
   const allFavoriteThings = [
     "💦🌹",
     "😺",
@@ -16,23 +15,20 @@ function ComplexStateObjects() {
     "🥩🍝",
   ];
   const thingsElements = myFavoriteThings.map((thing) => (
-    <div key={thing}>
-      {thing}
-    </div>
+    <p key={thing}>{thing}</p>
   ));
-  console.log(thingsElements);
 
   function addFavoriteThing() {
-    setMyFavoriteThings((prevFaveThings) => [
-      ...prevFaveThings,
-      allFavoriteThings[prevFaveThings.leng],
+    setMyFavoriteThings((prevThing) => [
+      ...prevThing,
+      allFavoriteThings[prevThing.length],
     ]);
   }
 
   return (
     <>
       <button onClick={addFavoriteThing}>Add item</button>
-      <div style={{backgroundColor:"tomato"}} aria-live="polite">{thingsElements}</div>
+      <div aria-live="polite">{thingsElements}</div>
     </>
   );
 }
