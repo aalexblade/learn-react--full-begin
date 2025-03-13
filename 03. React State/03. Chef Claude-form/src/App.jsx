@@ -7,6 +7,7 @@ import TestState from "./components/TestState";
 import TernaryOperator from "./components/TernaryOperator";
 import TogglingState from "./components/TogglingState";
 import ComplexStateObjects from "./components/ComplexStateObjects";
+import FormsSignup from "./components/FormsSignup";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* <TestState /> */}
       {/* <TernaryOperator /> */}
       {/* <TogglingState /> */}
-      <ComplexStateObjects />
+      {/* <ComplexStateObjects /> */}
+      <FormsSignup />
     </main>
   );
 }
