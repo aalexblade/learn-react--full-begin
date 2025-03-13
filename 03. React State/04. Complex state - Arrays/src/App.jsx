@@ -62,7 +62,6 @@ export default App;
 
 // ==========================================
 
-
 // import React from "react"
 // import avatar from "./images/user.png"
 // import starFilled from "./images/star-filled.png"
