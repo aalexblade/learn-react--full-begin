@@ -106,3 +106,19 @@ main > button {
 form {
   color: #e4d7d7;
 }
+
+input {
+  text-align: justify;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 0 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e4d7d7;
+  }
+
+  &:focus {
+    background-color: #e4d7d7;
+  }
+}
