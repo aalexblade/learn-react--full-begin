@@ -9,9 +9,7 @@ function Main() {
     return <li key={ingredient}>{ingredient}</li>;
   });
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+  function addIngredient(formData) {
     const newIngridient = formData.get("ingredient");
     setIngredients((prevIngr) => [...prevIngr, newIngridient]);
     console.log(ingredients);
@@ -19,7 +17,7 @@ function Main() {
 
   return (
     <main>
-      <form onSubmit={handleSubmit} className="add-ingridient-form">
+      <form action={addIngredient} className="add-ingridient-form">
         <input
           type="text"
           placeholder="e.g. oregano"
