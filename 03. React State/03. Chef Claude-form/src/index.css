@@ -111,7 +111,7 @@ input {
   text-align: justify;
   border-radius: 12px;
   padding: 10px;
-  margin: 0 10px;
+  margin: 10px;
   cursor: pointer;
 
   &:hover {
@@ -121,4 +121,25 @@ input {
   &:focus {
     background-color: #e4d7d7;
   }
+}
+
+textarea {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e4d7d7;
+  }
+
+  &:focus {
+    background-color: #e4d7d7;
+  }
+}
+
+fieldset{
+  border: 1px solid #e4d7d7;
+  display: flex;
+  flex-direction: column;
 }
