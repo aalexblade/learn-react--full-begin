@@ -8,7 +8,7 @@ import TernaryOperator from "./components/TernaryOperator";
 import TogglingState from "./components/TogglingState";
 import ComplexStateObjects from "./components/ComplexStateObjects";
 import FormsSignup from "./components/FormsSignup";
-import FormTextaria from "./components/FormTextaria";
+import FormTextariaChackBox from "./components/FormTextariaChackBox";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       {/* <TogglingState /> */}
       {/* <ComplexStateObjects /> */}
       {/* <FormsSignup /> */}
-      <FormTextaria />
+      <FormTextariaChackBox />
     </main>
   );
 }
