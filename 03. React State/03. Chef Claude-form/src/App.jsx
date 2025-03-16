@@ -9,6 +9,7 @@ import TogglingState from "./components/TogglingState";
 import ComplexStateObjects from "./components/ComplexStateObjects";
 import FormsSignup from "./components/FormsSignup";
 import FormTextariaChackBox from "./components/FormTextariaChackBox";
+import FormObjectEntrise from "./components/FormObjectEntrise";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* <TogglingState /> */}
       {/* <ComplexStateObjects /> */}
       {/* <FormsSignup /> */}
-      <FormTextariaChackBox />
+      {/* <FormTextariaChackBox /> */}
+      <FormObjectEntrise />
     </main>
   );
 }
