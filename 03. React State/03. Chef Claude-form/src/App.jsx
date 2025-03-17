@@ -10,6 +10,7 @@ import ComplexStateObjects from "./components/ComplexStateObjects";
 import FormsSignup from "./components/FormsSignup";
 import FormTextariaChackBox from "./components/FormTextariaChackBox";
 import FormObjectEntrise from "./components/FormObjectEntrise";
+import ConditionalRendering from "./components/ConditionalRendering&&";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
       {/* <ComplexStateObjects /> */}
       {/* <FormsSignup /> */}
       {/* <FormTextariaChackBox /> */}
-      <FormObjectEntrise />
+      {/* <FormObjectEntrise /> */}
+      <ConditionalRendering />
     </main>
   );
 }
