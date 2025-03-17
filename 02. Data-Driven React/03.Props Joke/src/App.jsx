@@ -3,8 +3,8 @@ import jokesData from "./jokesData";
 
 function App() {
   const jokeElement = jokesData.map((joke) => {
-    const { setup, punchline } = joke;
-    return <Jouke setup={setup} punchline={punchline} />;
+    const { id, setup, punchline } = joke;
+    return <Jouke key={id} setup={setup} punchline={punchline} />;
   });
 
   return <main>{jokeElement}</main>;
