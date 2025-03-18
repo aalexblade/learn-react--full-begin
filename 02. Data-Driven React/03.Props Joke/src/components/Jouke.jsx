@@ -14,8 +14,10 @@ function Jouke({ setup, punchline }) {
   return (
     <>
       {setup && <h3 className="setup"> Setup: {setup} </h3>}
-      {isShown && <p>Punchline: {punchline}</p>}
-      <button onClick={toggleShown}>Shown punchline</button>
+      {isShown ? <p>Punchline: {punchline}</p> : null}
+      <button onClick={toggleShown}>
+        {isShown ? "Hide" : "Shown"} punchline
+      </button>
       <hr />
     </>
   );
