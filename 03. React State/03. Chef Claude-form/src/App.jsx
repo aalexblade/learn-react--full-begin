@@ -11,6 +11,7 @@ import FormsSignup from "./components/FormsSignup";
 import FormTextariaChackBox from "./components/FormTextariaChackBox";
 import FormObjectEntrise from "./components/FormObjectEntrise";
 import ConditionalRendering from "./components/ConditionalRendering&&";
+import ConditionalRenderingIfElse from "./components/ConditionalRenderingIfElsa";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
       {/* <FormsSignup /> */}
       {/* <FormTextariaChackBox /> */}
       {/* <FormObjectEntrise /> */}
-      <ConditionalRendering />
+      {/* <ConditionalRendering /> */}
+      <ConditionalRenderingIfElse />
     </main>
   );
 }
