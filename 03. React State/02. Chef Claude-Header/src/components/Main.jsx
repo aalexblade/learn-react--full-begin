@@ -1,6 +1,6 @@
-// import { useState } from "react";
-
 import React from "react";
+
+//3==================== Conditional Rendering
 
 function Main() {
   const [ingredients, setIngredients] = React.useState([]);
@@ -33,6 +33,40 @@ function Main() {
 }
 
 export default Main;
+
+// 2=====================add useState======================================
+
+// function Main() {
+//   const [ingredients, setIngredients] = React.useState([]);
+
+//   const ingredientsListItems = ingredients.map((ingredient) => {
+//     return <li key={ingredient}>{ingredient}</li>;
+//   });
+
+//   function addIngredient(formData) {
+//     const newIngridient = formData.get("ingredient");
+//     setIngredients((prevIngr) => [...prevIngr, newIngridient]);
+//     console.log(ingredients);
+//   }
+
+//   return (
+//     <main>
+//       <form action={addIngredient} className="add-ingridient-form">
+//         <input
+//           type="text"
+//           placeholder="e.g. oregano"
+//           aria-label="Add ingredient"
+//           name="ingredient"
+//         />
+//         <button> Add ingredient</button>
+//       </form>
+
+//       <ul>{ingredientsListItems}</ul>
+//     </main>
+//   );
+// }
+
+// 1===============Default state(locale state)=====================================
 
 // function Main() {
 //   const ingredients = ["Chicken", "Oregano", "Tomatoes"];
