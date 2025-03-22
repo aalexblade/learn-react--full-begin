@@ -3,6 +3,7 @@ import "./index.css";
 
 import Images from "./components/Images";
 import Counter from "./components/Counter";
+import Counter2 from "./components/Counter2";
 import TestState from "./components/TestState";
 import TernaryOperator from "./components/TernaryOperator";
 import TogglingState from "./components/TogglingState";
@@ -18,6 +19,7 @@ function App() {
     <main className="container">
       {/* <Images /> */}
       {/* <Counter /> */}
+      <Counter2 />
       {/* <TestState /> */}
       {/* <TernaryOperator /> */}
       {/* <TogglingState /> */}
@@ -26,7 +28,7 @@ function App() {
       {/* <FormTextariaChackBox /> */}
       {/* <FormObjectEntrise /> */}
       {/* <ConditionalRendering /> */}
-      <ConditionalRenderingIfElse />
+      {/* <ConditionalRenderingIfElse /> */}
     </main>
   );
 }
