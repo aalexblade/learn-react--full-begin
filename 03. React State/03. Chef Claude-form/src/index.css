@@ -143,3 +143,17 @@ fieldset{
   display: flex;
   flex-direction: column;
 }
+
+
+.count {
+  background-color:#e4d7d7;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #262626;
+  margin-block: 5px 5px;
+  font-size: 2rem;
+}
