@@ -2,12 +2,12 @@ import React from "react";
 import padsData from "./pads";
 import Pad from "./Pad";
 
-export default function App({darkMode}) {
+export default function App() {
   const [pads, setPads] = React.useState(padsData);
 
- const styles={
-  backgroundColor: darkMode ? "#c5bebe" : "#21eb3f"
- }
+//  const styles={
+//   backgroundColor: darkMode ? "#c5bebe" : "#21eb3f"
+//  }
  
 //     const styles = {
   //     backgroundColor: darkMode ? "#222222" : "#cccccc",
@@ -15,7 +15,7 @@ export default function App({darkMode}) {
   //   };
  
   const buttonEl = pads.map((pad) => (
-    <button key={pad.id} style={styles} ></button>
+    <Pad key={pad.id} color={pad.color} on={pad.on}/>
   ));
 
   return (
