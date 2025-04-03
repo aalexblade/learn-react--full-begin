@@ -1,8 +1,6 @@
 import React from "react";
 
 export default function Pad(props) {
- 
-//   const [on, setOn] = React.useState(props.on);
 
   return (
     <button
