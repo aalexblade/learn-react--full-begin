@@ -2,10 +2,11 @@ import React from "react";
 
 import IngredientsList from "./components/IngredientsList";
 import ClaudeRecipe from "./components/ClaudeRecipe";
+import getRecipesByIngredients from "./spoonacular";
+
+// import { getRecipeFromChefClaude, getRecipeFromMistral } from "./ai";
 
 export default function Main() {
-
-
   const [ingredients, setIngredients] = React.useState([
     "all the main spices",
     "pasta",
@@ -14,8 +15,9 @@ export default function Main() {
   ]);
   const [recipeShown, setRecipeShown] = React.useState(false);
 
-  function toggleRecipeShown() {
-    setRecipeShown((prevShown) => !prevShown);
+  async function getRecipe() {
+    const recipeMarkdown = await getRecipeFromChefClaude(ingredients);
+    console.log(recipeMarkdown);
   }
 
   function addIngredient(formData) {
@@ -35,9 +37,9 @@ export default function Main() {
         <button>Add ingredient</button>
       </form>
 
-      {ingredients.length > 0 && <IngredientsList 
-      ingredients={ingredients} 
-      toggleRecipeShown={toggleRecipeShown}/>}
+      {ingredients.length > 0 && (
+        <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />
+      )}
 
       {recipeShown && <ClaudeRecipe />}
     </main>
