@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
+    "@huggingface/inference": "^3.7.1",
     "@huggingface/transformers": "^3.4.2",
     "dotenv": "^16.4.7",
+    "marked": "^15.0.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

@@ -34,3 +34,20 @@ export default function ClaudeRecipe(){
 </section>
 )
 }
+
+
+// ========================================================
+// import { marked } from 'marked'
+
+// export default function ClaudeRecipe({ recipe }) {
+//   return (
+//     <section>
+//       <h2>Chef Claude Recommends:</h2>
+//       <article
+//         className="suggested-recipe-container"
+//         aria-live="polite"
+//         dangerouslySetInnerHTML={{ __html: marked.parse(recipe) }}
+//       />
+//     </section>
+//   )
+// }
