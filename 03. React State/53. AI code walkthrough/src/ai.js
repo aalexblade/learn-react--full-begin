@@ -12,7 +12,9 @@ export async function getRecipeFromChefClaude(ingredientsArr) {
   const ingredientsString = ingredientsArr.join(", ");
   try {
     const response = await fetch(
-      `${BASE_URL}?ingredients=${encodeURIComponent(ingredientsString)}&number=1&ranking=1&apiKey=${SPOONACULAR_API_KEY}`
+      `${BASE_URL}?ingredients=${encodeURIComponent(
+        ingredientsString
+      )}&number=1&ranking=1&apiKey=${SPOONACULAR_API_KEY}`
     );
 
     if (!response.ok) {
@@ -26,7 +28,12 @@ export async function getRecipeFromChefClaude(ingredientsArr) {
     }
 
     const recipe = data[0];
-    return `**${recipe.title}**\n![Image](${recipe.image})\n\nYou can find more info about this recipe [here](https://spoonacular.com/recipes/${recipe.title.replace(/\s+/g, '-')}-${recipe.id})`;
+    return `**${recipe.title}**\n![Image](${
+      recipe.image
+    })\n\nYou can find more info about this recipe [here](https://spoonacular.com/recipes/${recipe.title.replace(
+      /\s+/g,
+      "-"
+    )}-${recipe.id})`;
   } catch (err) {
     console.error("Spoonacular API error:", err);
     return "Oops! Something went wrong while fetching the recipe.";
@@ -55,9 +62,6 @@ export async function getRecipeFromMistral(ingredientsArr) {
     console.error(err.message);
   }
 }
-
-
-
 
 // import Anthropic from "@anthropic-ai/sdk";
 // import { HfInference } from "@huggingface/inference";

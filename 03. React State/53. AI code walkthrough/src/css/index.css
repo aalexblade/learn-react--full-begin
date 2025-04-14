@@ -105,11 +105,18 @@ ul.ingredients-list > li {
   cursor: pointer;
 }
 
+.suggested-recipe-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
 .suggested-recipe-container {
-  color: #475467;
-  line-height: 28px;
-  font-size: 1.125rem;
-  font-weight: 400;
+  padding: 1rem;
+  background-color: #fffefb;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .suggested-recipe-container ul li, .suggested-recipe-container ol li {
