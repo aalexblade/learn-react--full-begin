@@ -9,10 +9,10 @@ export default function Main() {
 
   function handleChange(event) {
     const { value, name } = event.currentTarget;
+
     setMeme((prevMeme) => ({
       ...prevMeme,
       [name]: value,
-      
     }));
   }
 
@@ -50,3 +50,4 @@ export default function Main() {
     </main>
   );
 }
+     
