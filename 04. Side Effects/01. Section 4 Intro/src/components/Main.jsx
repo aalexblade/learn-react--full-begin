@@ -2,14 +2,13 @@ import { useState } from "react";
 
 export default function Main() {
   const [meme, setMeme] = useState({
+    imageUrl: "http://i.imgflip.com/1bij.jpg",
     topText: "One does not simply",
     bottomText: "Walk into Mordor",
-    imageUrl: "http://i.imgflip.com/1bij.jpg",
   });
 
-  function handleChange(event) {
+  function handleChanche(event) {
     const { value, name } = event.currentTarget;
-
     setMeme((prevMeme) => ({
       ...prevMeme,
       [name]: value,
@@ -25,7 +24,7 @@ export default function Main() {
             type="text"
             placeholder="One does not simply"
             name="topText"
-            onChange={handleChange}
+            onChange={handleChanche}
             value={meme.topText}
           />
         </label>
@@ -36,7 +35,7 @@ export default function Main() {
             type="text"
             placeholder="Walk into Mordor"
             name="bottomText"
-            onChange={handleChange}
+            onChange={handleChanche}
             value={meme.bottomText}
           />
         </label>
@@ -50,4 +49,3 @@ export default function Main() {
     </main>
   );
 }
-     
