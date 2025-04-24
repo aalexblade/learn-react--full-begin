@@ -1,47 +1,22 @@
-// import { useState, useEffect } from "react";
-
-// export default function App() {
-//   const [starWarsData, setStarWarsData] = useState({});
-//   const [count, setCount] = useState(0);
-
-//   console.log("Rendered!")
-//   useEffect(() => {
-//     console.log("Effect fn ran");
-//     fetch("https://swapi.info/api/people/1")
-//       .then((res) => res.json())
-//       .then((data) => setStarWarsData(data));
-//   }, []);
-
-//   return (
-//     <div>
-//       <h2>The counter is {count}</h2>
-//       <button onClick={() => setCount((prevCount) => prevCount + 1)}>
-//         Add
-//       </button>
-//       <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
-//     </div>
-//   );
-// }
-
-
-import React from "react"
+import { useState, useEffect } from "react";
 
 export default function App() {
-    const [starWarsData, setStarWarsData] = React.useState({})
-    const [count, setCount] = React.useState(0)
-    
-    /**
-     * Challenge part 1:
-     * Fetch the data from this url: "https://swapi.dev/api/people/1"
-     * and save it in the starWarsData state. Make sure you don't
-     * get stuck in an infinite rendering loop!
-     */
-    
-    return (
-        <div>
-            <h2>The count is {count}</h2>
-            <button onClick={() => setCount(prevCount => prevCount + 1)}>Add</button>
-            <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
-        </div>
-    )
+  const [starWarsData, setStarWarsData] = useState({});
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    fetch(`https://swapi.info/api/people/${count}`)
+      .then((res) => res.json())
+      .then((data) => setStarWarsData(data));
+  }, [count]);
+
+  return (
+    <div>
+      <h2>The counter is {count}</h2>
+      <button onClick={() => setCount((prevCount) => prevCount + 1)}>
+        Get nex character
+      </button>
+      <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
+    </div>
+  );
 }
