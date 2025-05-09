@@ -5,7 +5,7 @@
 body {
   font-family: Karla, sans-serif;
   margin: 0;
-  background-color: #0B2434;
+  background-color: #0b2434;
   padding: 20px;
   height: 100vh;
   display: flex;
@@ -22,7 +22,7 @@ div#root {
 }
 
 main {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   height: 100%;
   border-radius: 5px;
   display: flex;
@@ -58,7 +58,7 @@ button.roll-dice {
   width: 100px;
   border: none;
   border-radius: 6px;
-  background-color: #5035FF;
+  background-color: #5035ff;
   color: white;
   font-size: 1.2rem;
   transition: background-color 0.2s ease;
@@ -66,4 +66,16 @@ button.roll-dice {
 
 .roll-dice:hover {
   background-color: #3624b5;
+}
+
+.title {
+ font-size: 40px;
+ margin: 0;
+}
+
+.instructions {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: center;
 }
