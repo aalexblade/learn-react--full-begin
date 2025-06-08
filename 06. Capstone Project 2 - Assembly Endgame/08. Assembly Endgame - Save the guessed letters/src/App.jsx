@@ -10,7 +10,9 @@ export default function AssemblyEndgame() {
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
   function addGiessedLetters(letter) {
-    setGuessedLetters((prevLetters) => [...prevLetters, letter]);
+    setGuessedLetters((prevLetters) =>
+      prevLetters.includes(letter) ? prevLetters : [...prevLetters, letter]
+    );
   }
 
   const lnguageElement = languages.map((lang) => {
@@ -30,10 +32,7 @@ export default function AssemblyEndgame() {
     .map((letter, index) => <span key={index}>{letter.toUpperCase()}</span>);
 
   const keyboarElements = alphabet.split("").map((letter) => (
-    <button 
-    key={letter} 
-    onClick={() => addGiessedLetters(letter)}
-    >
+    <button key={letter} onClick={() => addGiessedLetters(letter)}>
       {letter.toLocaleUpperCase()}
     </button>
   ));
