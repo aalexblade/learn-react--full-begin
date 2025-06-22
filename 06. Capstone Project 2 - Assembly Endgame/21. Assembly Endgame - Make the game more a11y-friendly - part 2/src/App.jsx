@@ -22,11 +22,12 @@ export default function AssemblyEndgame() {
     const [guessedLetters, setGuessedLetters] = useState([])
 
     // Derived values
+    const numGuessesLefts = languages.length -1
     const wrongGuessCount =
         guessedLetters.filter(letter => !currentWord.includes(letter)).length
     const isGameWon =
         currentWord.split("").every(letter => guessedLetters.includes(letter))
-    const isGameLost = wrongGuessCount >= languages.length - 1
+    const isGameLost = wrongGuessCount >= numGuessesLefts
     const isGameOver = isGameWon || isGameLost
     const lastGuessedLetter = guessedLetters[guessedLetters.length - 1]
     const isLastGuessIncorrect = lastGuessedLetter && !currentWord.includes(lastGuessedLetter)
@@ -147,12 +148,21 @@ export default function AssemblyEndgame() {
             <section className="word">
                 {letterElements}
             </section>
+
+            {/* Combined visually-hidden aria-live region for status updates */}
             
             <section 
                 className="sr-only" 
                 aria-live="polite" 
                 role="status"
             >
+            <p>
+                {currentWord.includes(lastGuessedLetter)?
+            `Correct! The letter ${lastGuessedLetter} is in the world` :
+            `Sorry, the letter ${lastGuessedLetter} is not in the world`   
+            }
+            You have {numGuessesLefts} atempts left.
+            </p>
                 <p>Current word: {currentWord.split("").map(letter => 
                 guessedLetters.includes(letter) ? letter + "." : "blank.")
                 .join(" ")}</p>
